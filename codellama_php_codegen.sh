@@ -23,17 +23,4 @@ logic:\n
 
 PHP_CODE_GEN_PROMPT="$PHP_CODE_GEN_PROMPT\n$(cat $1)\n"
 
-PYTHON_CODE_GEN_PROMPT="
-implement the following logic in python
-and show me the code only, 
-and do not explain
-and do not show explanation
-and do not try to explain
-and output valid python code
-
-logic:\n
-"
-
-PYTHON_CODE_GEN_PROMPT="$PYTHON_CODE_GEN_PROMPT\n$(cat $1)\n"
-
 echo $PHP_CODE_GEN_PROMPT | ollama run codellama
